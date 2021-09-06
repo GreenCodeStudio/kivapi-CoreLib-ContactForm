@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <element>
+        <link>/panel/ContactForm</link>
+        <title>Contact Form</title>
+    </element>
+</menu>

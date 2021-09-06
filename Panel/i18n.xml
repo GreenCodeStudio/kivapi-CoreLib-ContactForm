@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <node name="Header">
+        <value lang="en">Contact form messages</value>
+        <value lang="pl">Wiadomości formularza kontaktowego</value>
+    </node>
+    <node name="Fields">
+        <node name="id">
+            <value lang="en">ID</value>
+            <value lang="pl">ID</value>
+        </node>
+        <node name="mail">
+            <value lang="en">Mail</value>
+            <value lang="pl">Mail</value>
+        </node>
+        <node name="name">
+            <value lang="en">Name</value>
+            <value lang="pl">Nazwa</value>
+        </node>
+        <node name="content">
+            <value lang="en">Content</value>
+            <value lang="pl">Treść</value>
+        </node>
+    </node>
+</root>
