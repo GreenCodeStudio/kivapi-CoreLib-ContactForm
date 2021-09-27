@@ -20,46 +20,37 @@ export class index {
         let objectsList = new ObjectsList(datasource);
         objectsList.columns = [];
         objectsList.columns.push({
-            name: t('Fields.id'),
-            content: row => row.id,
-            sortName: 'id',
+            name: t('Fields.stamp'),
+            content: row => row.stamp,
+            sortName: 'stamp',
             width: 180,
             widthGrow: 0
         });
         objectsList.columns.push({
-            name: t('Fields.title'),
-            content: row => row.title,
-            sortName: 'title',
+            name: t('Fields.name'),
+            content: row => row.name,
+            sortName: 'name',
+            width: 180,
+            widthGrow: 1
+        });
+        objectsList.columns.push({
+            name: t('Fields.mail'),
+            content: row => row.mail,
+            sortName: 'mail',
             width: 180,
             widthGrow: 1
         });
 
 
-        //objectsList.sort = {"col": "stamp", "desc": true};
         objectsList.generateActions = (rows, mode) => {
             let ret = [];
-            // if (rows.length == 1) {
-            //     ret.push({
-            //         name: TCommonBase("details"),
-            //         icon: 'icon-show',
-            //         href: "/Balance/show/" + rows[0].id,
-            //         main: true
-            //     });
-            //if (Permissions.can('Balance', 'edit')) {
+
             ret.push({
-                name: TCommon("Edit"),
-                icon: 'icon-edit',
-                href: "/panel/Article/edit/" + rows[0].id,
+                name: TCommon("Show"),
+                icon: 'icon-show',
+                href: "/panel/ContactForm/show/" + rows[0].id,
             });
-            //}
-            // }
-            // if (mode != 'row' && Permissions.can('Balance', 'edit')) {
-            //     ret.push({
-            //         name: TCommonBase("openInNewTab"), icon: 'icon-show', showInTable: false, command() {
-            //             rows.forEach(x => window.open("/Balance/show/" + x.id))
-            //         }
-            //     });
-            // }
+
             return ret;
         }
         container.append(objectsList);
